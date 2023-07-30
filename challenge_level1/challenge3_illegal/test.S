@@ -10,9 +10,12 @@ RVTEST_CODE_BEGIN
   .option norvc
 
   li TESTNUM, 2
+  j correct
 illegal_instruction:
   .word 0              
   j fail
+
+  correct:
   TEST_PASSFAIL
 
   .align 8
